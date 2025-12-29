@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mqk8sgxuxg0j"
-path="res://.godot/imported/meadow_background.png-fb4919fa3eac815d1ad1ee1fbadd2949.ctex"
+uid="uid://dwikiwa4hkyof"
+path="res://.godot/imported/glowbug.png-d7006338c70835b561c42032f734e74f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/meadow_background.png"
-dest_files=["res://.godot/imported/meadow_background.png-fb4919fa3eac815d1ad1ee1fbadd2949.ctex"]
+source_file="res://assets/glowbug.png"
+dest_files=["res://.godot/imported/glowbug.png-d7006338c70835b561c42032f734e74f.ctex"]
 
 [params]
 

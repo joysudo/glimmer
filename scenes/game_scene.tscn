@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://bmh6rqi37xj6q"]
 
 [ext_resource type="Script" uid="uid://dvofiwg8an1o1" path="res://scenes/game_scene.gd" id="1_rurhu"]
-[ext_resource type="PackedScene" uid="uid://bog3cmameyxia" path="res://scenes/player.tscn" id="1_w5aja"]
-[ext_resource type="PackedScene" uid="uid://cdv3cfqgmev3j" path="res://glowbug.tscn" id="2_kk2rg"]
-[ext_resource type="Script" uid="uid://cv6h834xm7guw" path="res://scenes/player_movement.gd" id="2_onqr8"]
-[ext_resource type="Texture2D" uid="uid://cq5v0g8kr3njb" path="res://images/placeholder_player.png" id="3_bw6k5"]
-[ext_resource type="Texture2D" uid="uid://mqk8sgxuxg0j" path="res://images/meadow_background.png" id="4_y3j0m"]
+[ext_resource type="PackedScene" uid="uid://bog3cmameyxia" path="res://entities/player/player.tscn" id="1_w5aja"]
+[ext_resource type="PackedScene" uid="uid://cdv3cfqgmev3j" path="res://entities/glowbug/glowbug.tscn" id="2_kk2rg"]
+[ext_resource type="Script" uid="uid://cv6h834xm7guw" path="res://entities/player/player_movement.gd" id="2_onqr8"]
+[ext_resource type="Texture2D" uid="uid://cq5v0g8kr3njb" path="res://assets/placeholder_player.png" id="3_bw6k5"]
+[ext_resource type="Texture2D" uid="uid://mqk8sgxuxg0j" path="res://assets/meadow_background.png" id="4_y3j0m"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rurhu"]
 radius = 7.0
