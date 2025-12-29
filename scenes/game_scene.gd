@@ -12,4 +12,5 @@ func spawn_bug():
 	var random_x = randf_range(-map_size.x/2, map_size.x/2)
 	var random_y = randf_range(-map_size.y/2, map_size.y/2)
 	new_bug.position = Vector2(random_x, random_y)
+	new_bug.bug_caught.connect(spawn_bug)
 	add_child(new_bug)
