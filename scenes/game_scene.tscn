@@ -17,6 +17,7 @@ bug_scene = ExtResource("2_kk2rg")
 
 [node name="player" parent="." instance=ExtResource("1_w5aja")]
 unique_name_in_owner = true
+scale = Vector2(1.5, 1.5)
 script = ExtResource("2_onqr8")
 
 [node name="Sprite2D" type="Sprite2D" parent="player"]
@@ -24,14 +25,15 @@ texture = ExtResource("3_bw6k5")
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 zoom = Vector2(7, 7)
-limit_left = -80
-limit_top = -72
-limit_right = 80
-limit_bottom = 72
+limit_left = -120
+limit_top = -108
+limit_right = 120
+limit_bottom = 108
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 shape = SubResource("CapsuleShape2D_rurhu")
 
 [node name="background" type="Sprite2D" parent="."]
 z_index = -10
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("4_y3j0m")
