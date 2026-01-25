@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="stupid cupid"
+config/name="glimmer"
 run/main_scene="uid://bmh6rqi37xj6q"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bmh6rqi37xj6q"]
+[gd_scene load_steps=15 format=3 uid="uid://bmh6rqi37xj6q"]
 
 [ext_resource type="Script" uid="uid://dvofiwg8an1o1" path="res://scenes/game_scene.gd" id="1_rurhu"]
 [ext_resource type="PackedScene" uid="uid://bog3cmameyxia" path="res://entities/player/player.tscn" id="1_w5aja"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bcpk1my5rgv5n" path="res://entities/glowbug/goldenbug.tscn" id="3_mw25s"]
 [ext_resource type="Texture2D" uid="uid://c40mt3yldsf4h" path="res://assets/cloak_sprite.png" id="5_b5spy"]
 [ext_resource type="Texture2D" uid="uid://bmrc8e6b07dyq" path="res://assets/white_radial.png" id="6_kk2rg"]
+[ext_resource type="PackedScene" uid="uid://dl5wv5f3osjnn" path="res://entities/player/trail.tscn" id="6_rvs2r"]
 [ext_resource type="Texture2D" uid="uid://db71768cf0v18" path="res://assets/cloak_sprite (1).png" id="6_utbpp"]
 [ext_resource type="Texture2D" uid="uid://dxrnbvir23t6j" path="res://assets/plain_grass.png" id="9_tcjrq"]
 [ext_resource type="PackedScene" uid="uid://bnv7lqf1jmx4y" path="res://scenes/game_over.tscn" id="9_utbpp"]
@@ -45,7 +46,9 @@ golden_bug_scene = ExtResource("3_mw25s")
 
 [node name="player" parent="." instance=ExtResource("1_w5aja")]
 unique_name_in_owner = true
+z_index = 50
 script = ExtResource("2_onqr8")
+trail_scene = ExtResource("6_rvs2r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player"]
 sprite_frames = SubResource("SpriteFrames_mw25s")

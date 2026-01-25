@@ -8,6 +8,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	spawn_bug()
+	spawn_bug()
 
 func spawn_bug():
 	var new_bug

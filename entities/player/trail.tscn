@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl5wv5f3osjnn"]
+
+[ext_resource type="Script" uid="uid://ckf7u71efj5gm" path="res://entities/player/trail.gd" id="1_pqp81"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pqp81"]
+blend_mode = 1
+light_mode = 1
+
+[node name="Trail" type="Sprite2D"]
+modulate = Color(0, 1, 0.8, 1)
+self_modulate = Color(0, 1, 0.8, 1)
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_pqp81")
+script = ExtResource("1_pqp81")

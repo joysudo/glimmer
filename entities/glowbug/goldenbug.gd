@@ -7,5 +7,6 @@ func catch_bug():
 	if player:
 		player.boost_light(0.1)
 		player.camera_shake(1.0, 0.2)
+		player.start_boost()
 	bug_caught.emit()
 	queue_free()
