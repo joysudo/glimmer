@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://bmh6rqi37xj6q"]
+[gd_scene load_steps=13 format=3 uid="uid://bmh6rqi37xj6q"]
 
 [ext_resource type="Script" uid="uid://dvofiwg8an1o1" path="res://scenes/game_scene.gd" id="1_rurhu"]
 [ext_resource type="PackedScene" uid="uid://bog3cmameyxia" path="res://entities/player/player.tscn" id="1_w5aja"]
 [ext_resource type="PackedScene" uid="uid://cdv3cfqgmev3j" path="res://entities/glowbug/glowbug.tscn" id="2_kk2rg"]
 [ext_resource type="Script" uid="uid://cv6h834xm7guw" path="res://entities/player/player.gd" id="2_onqr8"]
+[ext_resource type="PackedScene" uid="uid://bcpk1my5rgv5n" path="res://entities/glowbug/goldenbug.tscn" id="3_mw25s"]
 [ext_resource type="Texture2D" uid="uid://mqk8sgxuxg0j" path="res://assets/meadow_background.png" id="4_y3j0m"]
 [ext_resource type="Texture2D" uid="uid://c40mt3yldsf4h" path="res://assets/cloak_sprite.png" id="5_b5spy"]
 [ext_resource type="Texture2D" uid="uid://bmrc8e6b07dyq" path="res://assets/white_radial.png" id="6_kk2rg"]
@@ -38,7 +39,8 @@ height = 24.0
 
 [node name="game_scene" type="Node2D"]
 script = ExtResource("1_rurhu")
-bug_scene = ExtResource("2_kk2rg")
+normal_bug_scene = ExtResource("2_kk2rg")
+golden_bug_scene = ExtResource("3_mw25s")
 
 [node name="player" parent="." instance=ExtResource("1_w5aja")]
 unique_name_in_owner = true

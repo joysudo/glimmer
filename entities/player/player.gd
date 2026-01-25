@@ -4,9 +4,8 @@ extends CharacterBody2D
 @onready var light = $PointLight2D
 @export var speed = 75
 
-var max_scale = 0.5
+var max_scale = 2.0
 var shrink_speed = 0.03 # need to make shrink_speed start low double and increase over time
-var boost = 0.05
 
 func _physics_process(_delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -35,6 +34,13 @@ func game_over():
 	set_physics_process(false)
 	get_parent().get_node("GameOverLayer").visible = true
 
-func boost_light():
-	var new_size = clamp (light.scale.x + boost, 0.0, max_scale)
+func boost_light(boost_amount: float = 0.05):
+	var new_size = clamp (light.scale.x + boost_amount, 0.0, max_scale)
 	light.scale = Vector2(new_size, new_size)
+
+func camera_shake(intensity: float, duration: float):
+	var camera = $Camera2D
+	var tween = create_tween()
+	for i in range(5): 
+		tween.tween_property(camera, "offset", Vector2(randf_range(-intensity, intensity), randf_range(-intensity, intensity)), duration/5)
+	tween.tween_property(camera, "offset", Vector2.ZERO, 0.1)

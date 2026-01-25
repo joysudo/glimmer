@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcpk1my5rgv5n"]
+
+[ext_resource type="PackedScene" uid="uid://cdv3cfqgmev3j" path="res://entities/glowbug/glowbug.tscn" id="1_l0pb2"]
+[ext_resource type="Script" uid="uid://n8vx4yycaov7" path="res://entities/glowbug/goldenbug.gd" id="2_2jcae"]
+
+[sub_resource type="Gradient" id="Gradient_w2adi"]
+colors = PackedColorArray(1, 0.8862745, 0, 0.62352943, 1, 0.8862745, 0, 0)
+
+[node name="GoldenBug" instance=ExtResource("1_l0pb2")]
+script = ExtResource("2_2jcae")
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+modulate = Color(1, 0.8509804, 0.36862746, 1)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="AnimatedSprite2D" index="0"]
+lifetime = 2.0
+lifetime_randomness = 0.5
+emission_shape = 1
+emission_sphere_radius = 5.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 1.0
+initial_velocity_max = 3.0
+orbit_velocity_min = 0.1
+orbit_velocity_max = 0.2
+color_ramp = SubResource("Gradient_w2adi")
