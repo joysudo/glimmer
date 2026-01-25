@@ -7,6 +7,10 @@ var player_in_range = false
 func _ready():
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
+	var sprite = $AnimatedSprite2D
+	var original_scale = sprite.scale
+	sprite.scale = Vector2.ZERO
+	create_tween().tween_property(sprite, "scale", original_scale, 0.5).set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_OUT)
 
 func _on_body_entered(body):
 	if body.name == "player":
