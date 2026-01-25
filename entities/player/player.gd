@@ -28,6 +28,12 @@ func _ready():
 func _process(delta): #shrink
 	if light.scale.x > 0:
 		light.scale -= Vector2(shrink_speed, shrink_speed) * delta
+	else:
+		game_over()
+		
+func game_over():
+	set_physics_process(false)
+	get_parent().get_node("GameOverLayer").visible = true
 
 func boost_light():
 	var new_size = clamp (light.scale.x + boost, 0.0, max_scale)

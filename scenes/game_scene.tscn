@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bmh6rqi37xj6q"]
+[gd_scene load_steps=12 format=3 uid="uid://bmh6rqi37xj6q"]
 
 [ext_resource type="Script" uid="uid://dvofiwg8an1o1" path="res://scenes/game_scene.gd" id="1_rurhu"]
 [ext_resource type="PackedScene" uid="uid://bog3cmameyxia" path="res://entities/player/player.tscn" id="1_w5aja"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c40mt3yldsf4h" path="res://assets/cloak_sprite.png" id="5_b5spy"]
 [ext_resource type="Texture2D" uid="uid://bmrc8e6b07dyq" path="res://assets/white_radial.png" id="6_kk2rg"]
 [ext_resource type="Texture2D" uid="uid://db71768cf0v18" path="res://assets/cloak_sprite (1).png" id="6_utbpp"]
+[ext_resource type="PackedScene" uid="uid://bnv7lqf1jmx4y" path="res://scenes/game_over.tscn" id="9_utbpp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mw25s"]
 animations = [{
@@ -68,3 +69,9 @@ texture = ExtResource("4_y3j0m")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(1.504086e-07, 0.13930812, 0.18429473, 1)
+
+[node name="GameOverLayer" type="CanvasLayer" parent="."]
+layer = 10
+visible = false
+
+[node name="Node2D" parent="GameOverLayer" instance=ExtResource("9_utbpp")]
