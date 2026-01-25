@@ -22,7 +22,6 @@ animations = [{
 }]
 
 [node name="Area2D" type="Area2D"]
-scale = Vector2(1.5, 1.5)
 collision_layer = 3
 script = ExtResource("1_mf6k2")
 

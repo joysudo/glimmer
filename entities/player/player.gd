@@ -1,8 +1,9 @@
 extends CharacterBody2D
+class_name Player
 
 @onready var sprite = $AnimatedSprite2D
 @onready var light = $PointLight2D
-@export var speed = 75
+@export var speed = 50
 
 var max_scale = 2.0
 var shrink_speed = 0.03 # need to make shrink_speed start low double and increase over time

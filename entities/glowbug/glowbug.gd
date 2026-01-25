@@ -24,6 +24,9 @@ func _on_body_exited(body):
 func _process(_delta):
 	if player_in_range and Input.is_action_just_pressed("interact"):
 		catch_bug()
+		var player = get_tree().current_scene.find_child("player", true, false)
+		player.camera_shake(0.2, 0.1)
+
 
 func catch_bug():
 	print("player caught the bug")
