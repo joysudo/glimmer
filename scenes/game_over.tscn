@@ -9,9 +9,9 @@ script = ExtResource("1_wqhvx")
 [node name="Button" type="Button" parent="."]
 texture_filter = 1
 offset_left = 518.0
-offset_top = 324.0
+offset_top = 285.0
 offset_right = 631.0
-offset_bottom = 384.0
+offset_bottom = 345.0
 theme_override_font_sizes/font_size = 24
 text = "Restart?"
 script = ExtResource("1_xeevv")
@@ -19,9 +19,9 @@ script = ExtResource("1_xeevv")
 [node name="GameOverLabel" type="Label" parent="."]
 texture_filter = 1
 offset_left = 520.0
-offset_top = 282.0
+offset_top = 243.0
 offset_right = 632.0
-offset_bottom = 315.0
+offset_bottom = 276.0
 theme_override_font_sizes/font_size = 24
 text = "Game over."
 
@@ -29,9 +29,9 @@ text = "Game over."
 modulate = Color(1, 1, 1, 0.7019608)
 texture_filter = 1
 offset_left = 484.0
-offset_top = 395.0
+offset_top = 356.0
 offset_right = 672.0
-offset_bottom = 461.0
+offset_bottom = 422.0
 theme_override_constants/line_spacing = 0
 theme_override_font_sizes/font_size = 24
 text = "Best combo: 7
