@@ -1,22 +1,41 @@
-[gd_scene load_steps=2 format=3 uid="uid://bnv7lqf1jmx4y"]
+[gd_scene load_steps=3 format=3 uid="uid://bnv7lqf1jmx4y"]
 
+[ext_resource type="Script" uid="uid://cxyeqnf3x4fpe" path="res://scenes/game_over.gd" id="1_wqhvx"]
 [ext_resource type="Script" uid="uid://dkm3p0q5tfrr3" path="res://scenes/button.gd" id="1_xeevv"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_wqhvx")
 
 [node name="Button" type="Button" parent="."]
+texture_filter = 1
 offset_left = 518.0
 offset_top = 324.0
 offset_right = 631.0
 offset_bottom = 384.0
-text = "restart?"
+theme_override_font_sizes/font_size = 24
+text = "Restart?"
 script = ExtResource("1_xeevv")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 527.0
+[node name="GameOverLabel" type="Label" parent="."]
+texture_filter = 1
+offset_left = 520.0
 offset_top = 282.0
-offset_right = 616.0
-offset_bottom = 305.0
+offset_right = 632.0
+offset_bottom = 315.0
+theme_override_font_sizes/font_size = 24
 text = "Game over."
+
+[node name="StatsLabel" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0.7019608)
+texture_filter = 1
+offset_left = 484.0
+offset_top = 395.0
+offset_right = 672.0
+offset_bottom = 461.0
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 24
+text = "Best combo: 7
+Time: 25.0 seconds"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

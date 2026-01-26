@@ -2,13 +2,13 @@ extends Node2D
 
 @export var normal_bug_scene: PackedScene
 @export var golden_bug_scene: PackedScene
-
 @export var map_size = Vector2(160, 144)
+var start_time
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	spawn_bug()
 	spawn_bug()
+	start_time = Time.get_ticks_msec()
 
 func spawn_bug():
 	var new_bug
@@ -16,7 +16,6 @@ func spawn_bug():
 		new_bug = golden_bug_scene.instantiate()
 	else: 
 		new_bug = normal_bug_scene.instantiate()
-	
 	var random_x = randf_range(-map_size.x/2, map_size.x/2)
 	var random_y = randf_range(-map_size.y/2, map_size.y/2)
 	new_bug.position = Vector2(random_x, random_y)

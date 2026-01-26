@@ -26,6 +26,7 @@ func _process(_delta):
 		catch_bug()
 		var player = get_tree().current_scene.find_child("player", true, false)
 		player.camera_shake(0.2, 0.1)
+		player.update_combo()
 
 
 func catch_bug():
