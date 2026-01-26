@@ -29,6 +29,8 @@ func _physics_process(_delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = direction * current_speed
 	move_and_slide()
+	position.x = clamp(position.x, -get_parent().map_size.x/2, get_parent().map_size.x/2)
+	position.y = clamp(position.y, -get_parent().map_size.y/2, get_parent().map_size.y/2)
 	# animations
 	if velocity.length() > 0:
 		sprite.play("moving")
@@ -88,7 +90,6 @@ func reset_combo():
 	create_tween().tween_property(overlay, "color", Color.html("#00242f"), 1.5).set_trans(Tween.TRANS_SINE)
 	var label = $"../ComboManager/ComboLabel"
 	label.text = ""
-
 
 func boost_light(boost_amount: float = 0.05):
 	var new_size = clamp (light.scale.x + boost_amount, 0.0, max_scale)
